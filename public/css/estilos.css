@@ -1,0 +1,99 @@
+body {
+    font-family: sans-serif;
+}
+:root {
+    --color-primario: #FFBCFF;
+    --color-hover: #4646462c;
+    --color-nav: #efefef;
+    --ancho-nav: 200px;
+    --color-sombra: #b6b6b680;
+    --color-letra: black;
+    font-family: sans-serif;
+    color: var(--color-letra)
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+ .mpMovimiento{
+    width:100%;
+    height:100%;
+    
+
+}
+  header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-primario);
+  }
+
+  h1 {
+    margin: 0 auto 0 0;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  button {
+    border: none;
+    padding: 0.5rem;
+    background-color: transparent;
+  }
+
+  header nav>a:first-child {
+    display: inline-block;
+    padding: 0.5rem;
+  }
+
+  header nav ul {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: calc(-1rem - var(--ancho-nav));
+    bottom: 0;
+    width: var(--ancho-nav);
+    max-width: 70%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    list-style-type: none;
+    background-color: var(--color-nav);
+    transition: left 0.7s ease-out;
+  }
+
+  header nav ul:target {
+    left: 0;
+  }
+
+  header nav ul:target+a {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-sombra);
+  }
+
+  header nav li {
+    padding: 0.5rem;
+  }
+
+  header li:active {
+    background-color: var(--color-hover)
+  }
+
+  header nav li a {
+    color: var(--color-letra);
+    text-decoration: none;
+  }
+
+  header nav li a span {
+    vertical-align: middle;
+  }
